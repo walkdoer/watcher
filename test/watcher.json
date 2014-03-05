@@ -1,0 +1,4 @@
+{
+    "files": ["./testFile.js"],
+    "process": "cp testFile.js testFile.0.1.0.js"
+}
