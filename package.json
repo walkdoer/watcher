@@ -1,0 +1,25 @@
+{
+  "name": "Watcher",
+  "version": "0.1.0",
+  "description": "watch file change and excute command",
+  "main": "watcher.js",
+  "dependencies": {
+    "when": "~2.8.0"
+  },
+  "devDependencies": {
+    "when": "~2.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangmhao/watcher.git"
+  },
+  "author": "andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangmhao/watcher/issues"
+  },
+  "homepage": "https://github.com/zhangmhao/watcher"
+}
