@@ -1,12 +1,13 @@
 'use strict';
 
 var fs= require('fs'),
+    util = require('util'),
     configFileName = 'watcher.json';
 
-console.log('------参数列表--------');
+util.log('------参数列表--------');
 process.argv.forEach(function (val, index, array) {
     if ( index > 1) {
-        console.log(index + ': ' + val);
+        util.log(index + ': ' + val);
     }
 });
 
@@ -16,18 +17,14 @@ if (configStr) {
     watcherConfig = JSON.parse(configStr);
 }
 
-console.log(watcherConfig);
+util.log(watcherConfig);
 
 var files = watcherConfig.files || [];
 
 files.forEach(function (file) {
-    console.log('File ' + file + ' is under watch...');
-    fs.watch(file, function (event, fileName) {
-        console.log(arguments);
-        console.log(event);
+    util.log('File ' + file + ' is under watch...');
+    fs.watch(file, function (event) {
+        console.log('File [' + file +'] ' + event);
     });
 });
 
-process.on('exit', function(code) {
-    console.log('About to exit of watcher');
-});
